@@ -1,0 +1,46 @@
+<ion-view view-title="Products" style="margin-top:3px">
+    <ion-header-bar class="bar-light bar-subheader">
+      <input type="search"
+             placeholder="Search Products..."
+             ng-model="search"
+             ng-focus="searchFocused = true"
+             ng-blur="searchFocused = false"
+             ng-change="scrollTop()"
+             style="font-size: 18px;
+                    background-color: #F1E99F;
+                    width: 100%;
+                    border-radius: 10px;
+                    text-align: center;"
+             class="full-width">
+     
+    </ion-header-bar>
+    <ion-content>
+        <div class="loader" id="loader1" style="display:block"></div>
+        <div class="cate-lv2" style="padding-bottom: 45px;">
+            <div class="card cate-lv2-item" ng-repeat="product in productByCate | filter:search">
+                <a ng-if="product != null" class="item item-thumbnail-left item-text-wrap">
+                    <img ng-if="product.pImage != 'dummy.jpg'" ng-src="http://139.59.183.156/images/productimg/{{sucCatId}}/{{product.pImage}}">
+                    <img ng-if="product.pImage == 'dummy.jpg'" ng-src="http://139.59.183.156/images/productimg/dummy.jpg">
+                    <h2>{{product.pName}} </h2>
+                    <p style="margin-top:8px">{{product.text1}}</p>
+                    <div class="prices">
+                        <div class="mrp" ng-if="product.mrp !==product.price">₹{{product.mrp}}</div>
+                        <div>₹{{product.price}}</div>
+                    </div>
+                    <div class="variety" ng-if="product.variety!=null" style="margin-top:10px;margin-bottom:20px">
+                        select size : 
+                        <select>
+                            <option ng-repeat="variety in product.variety">{{variety}}</option>
+                        </select>
+                    </div>
+                    <div class="like">
+                        <i data-ng-if="selectedProducts[product.pId]" class="ion-ios-minus-outline font22" style="color:red" data-ng-click="changeQuantity(product,'dec')"></i>
+                        <i data-ng-if="selectedProducts[product.pId]" class="font22">{{selectedProducts[product.pId].qty}}</i>
+                        <i data-ng-if="!selectedProducts[product.pId]" class="font22">0</i>
+                        <i class="ion-ios-plus-outline font22" data-ng-click="changeQuantity(product,'inc')" style="color:green"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

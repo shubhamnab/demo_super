@@ -1,0 +1,77 @@
+<ion-view view-title="Shopping cart" style="margin-top:3px">
+    <ion-content>
+        <div class="cate-lv2">
+            <div class="card cate-lv2-item" ng-repeat="product in selectedProducts">
+                <div class="item item-thumbnail-left item-text-wrap">
+                    <!--<img ng-src="/../../../../images/products/{{product.pId}}/{{product.pImage}}" />-->
+                    <img ng-if="product.pImage != 'dummy.jpg'" ng-src="http://139.59.183.156/images/productimg/{{product.subCategoryId}}/{{product.pImage}}">
+                    <img ng-if="product.pImage == 'dummy.jpg'" ng-src="http://139.59.183.156/images/productimg/dummy.jpg">
+
+                    <h2>{{product.pName}}</h2>
+                    <p style="margin-top:8px">{{product.text1}}</p>
+                    <div class="product-info">
+                        <div class="price">₹{{product.price}}</div>
+                        <p>x</p>
+                        <input type="text" disabled class="input-qty" placeholder="" value="{{product.qty}}" />
+                        <a class="product-delete"><i class="ion-android-delete" data-ng-click="deleteCheckout(product)"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="totalPrice>500 && showCouponCode" class="item item-input-inset" style="margin-top:15px;height:60px">
+            <label class="item-input-wrapper">
+              <input type="text" placeholder="Coupon Code" style="height:40px" ng-model="couponCode">
+            </label>
+            <button class="button button-balanced" style="min-height:40px;height:40px" ng-click="applyCoupon(couponCode,totalPrice)">
+              Apply
+            </button>
+            
+            <div class="clearfix"></div>
+        </div>
+        <p ng-if="totalPrice && totalPrice>499 && discount > 1" style="margin-top: 5px;color: #e83325;font-size: 14px;margin-left:10px;">{{message}}</p>
+        <div ng-if="totalPrice" class="total-prices">
+            <strong>Total</strong>
+            <span>₹{{totalPrice}}</span>
+            <div class="clearfix"></div>
+        </div>
+        
+        <div ng-if="totalPrice && totalPrice>500 && discount > 1" class="total-prices">
+            <strong>Discount</strong>
+            <span>₹ {{discount}}</span>
+            <div class="clearfix"></div>
+        </div>
+        <div ng-if=" totalPrice && totalPrice < 150" class="total-prices">
+            <strong>Delivery Charge</strong>
+            <span>₹ 25</span>
+            <p style="margin-top:20px;color:#656a6f;font-size:12px;">Minimum order should be 150 for No Delivery Charges</p>
+            <div class="clearfix"></div>
+        </div>
+        <div ng-if="totalPrice && totalPrice < 150" class="total-prices">
+            <strong>Net Amount</strong>
+            <span>₹{{totalPrice + 25}}</span>
+            <div class="clearfix"></div>
+        </div>
+        
+        <div ng-if="netAmount && discount>1 && totalPrice>499" class="total-prices">
+            <strong>Net Amount</strong>
+            <span>₹{{netAmount}}</span>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+        
+        
+
+        <div class="btn-checkout">
+            <a ng-if="totalPrice" href="#/app/address"><button style="margin-bottom: 50px;" class="button button-block button-balanced">
+                Confirm Order
+            </button></a>
+            <div class="clearfix"></div>
+            <div ng-if="!totalPrice" class="emptyCart">
+            <p style="color:red"> Your Cart is empty , please select some value from menu</p>
+            <a href="index.html" onClick="window.location.reload();"><button class="button button-block button-dark">
+                Go To Home Page
+            </button></a>
+                </div>
+        </div>
+    </ion-content>
+</ion-view>

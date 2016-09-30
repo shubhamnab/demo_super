@@ -1,0 +1,106 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-royal">
+      <ion-nav-back-button ng-click="goBack()">
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+        
+        <ion-nav-buttons side="right">
+        <a href="#/app/checkout" id="upperCheckoutButton">
+<div style="border-radius: 20px;" data-ng-if="noOfSelectedProducts!=0 && showCheckout" class="bar bar-footer bar-balanced">
+  <button class="button button-clear"></button>
+    <div class="title">Checkout &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ion-arrow-right-a"></span></div>
+  <button class="button button-icon button-clear ion-ios-cart">
+    <i style="
+                background: #58c1ea none repeat scroll 0 0;
+                border-radius: 10px;
+                color: #fff;
+                height: 17px;
+                padding: 2px;
+                position: absolute;
+                right: 0;
+                text-align: center;
+                top: -3px;
+                width: 17px;
+                ">
+            </i>
+            <label style="
+                position: absolute;
+                bottom: 56%;
+                right: 15%;
+                font-weight: bold;
+            " >{{noOfSelectedProducts}}</label>
+    </button>
+    </div></a>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-content>
+      <ion-list>
+       <!-- <ion-item menu-close ng-click="login()">
+          Login
+        </ion-item>-->
+          <ion-item menu-close href="#/app/home">
+            Home
+        </ion-item>
+        <!--<ion-item menu-close ng-if='user.notLogin' ng-click="login()">
+          Login
+        </ion-item>
+        <ion-item menu-close ng-if='user.loggedIn' ng-click="logout()">
+          Logout
+          <span class='item-note'>{{user.email}}</span>
+        </ion-item>
+        <ion-item menu-close ng-if='user.loggedIn'>
+          My Orders
+        </ion-item>-->
+        <ion-item menu-close href="#/app/contactus">
+          contact Us
+        </ion-item>
+        <ion-item menu-close href="#/app/developed">
+          Developed By
+        </ion-item>
+          <ion-item menu-close href="#/app/demo">
+          View Demo
+        </ion-item>
+        <ion-item menu-close href="https://www.facebook.com/Riddhisupermarket/?fref=ts">
+          Like Us On FB
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
+<a href="#/app/checkout" id="lowerCheckoutButton">
+<div style="border-radius: 20px;" data-ng-if="noOfSelectedProducts!=0 && showCheckout" class="bar bar-footer bar-balanced">
+  <button class="button button-clear"></button>
+    <div class="title">Checkout &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ion-arrow-right-a"></span></div>
+  <button class="button button-icon button-clear ion-ios-cart">
+    <i style="
+                background: #58c1ea none repeat scroll 0 0;
+                border-radius: 10px;
+                color: #fff;
+                height: 17px;
+                padding: 2px;
+                position: absolute;
+                right: 0;
+                text-align: center;
+                top: -3px;
+                width: 17px;
+                ">
+            </i>
+            <label style="
+                position: absolute;
+                bottom: 56%;
+                right: 15%;
+                font-weight: bold;
+            " >{{noOfSelectedProducts}}</label>
+    </button>
+    </div></a>
+
+  

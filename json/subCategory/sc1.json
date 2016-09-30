@@ -1,0 +1,21 @@
+[{
+    "id": 11,
+	"img": "img/category/1.jpg",
+    "name": "Aata",
+    "lastText": "Wheat and other Aata"
+  }, {
+    "id": 12,
+	"img": "img/category/2.jpg",
+    "name": "Rice",
+    "lastText": "All variety"
+  }, {
+    "id": 13,
+	"img": "img/category/3.jpg",
+    "name": "Dal",
+    "lastText": "Coffee,Tea , colddrinks"
+  }, {
+    "id": 14,
+	"img": "img/category/4.jpg",
+    "name": "Masala",
+    "lastText": "All Masala"
+  }]

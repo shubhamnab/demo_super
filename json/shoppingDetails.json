@@ -1,0 +1,25 @@
+[{
+  "selectedProducts" : {
+    "101" : {
+      "qty" : 2,
+      "name" : "BEET ROOT AND RED BEAN VEGAN BURGERS",
+      "price" : 1200,
+      "id" : 101,
+      "img" : "img/product/thumb1.jpg"
+    },
+    "102" : {
+      "qty" : 2,
+      "name" : "FRESH STRAWBERRY CREAM",
+      "price" : 500,
+      "id" : 102,
+      "img" : "img/product/thumb2.jpg"
+    }
+  },
+  "totalPrice" : 3400,
+  "details" : {
+    "name" : "dinesh",
+    "email" : "dkborana021@gmail.com",
+    "phoneNumber" : "8130678611",
+    "address" : "U-19/28\nDLF phase-3"
+  }
+}]

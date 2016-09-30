@@ -1,0 +1,21 @@
+[{
+    "id": 31,
+	"img": "img/category/1.jpg",
+    "name": "Aata",
+    "lastText": "Aata,Dal,Rice"
+  }, {
+    "id": 32,
+	"img": "img/category/2.jpg",
+    "name": "Rice",
+    "lastText": "maggie,pasta,bread"
+  }, {
+    "id": 33,
+	"img": "img/category/3.jpg",
+    "name": "Dal",
+    "lastText": "Coffee,Tea , colddrinks"
+  }, {
+    "id": 34,
+	"img": "img/category/4.jpg",
+    "name": "Masala",
+    "lastText": "All Masala"
+  }]

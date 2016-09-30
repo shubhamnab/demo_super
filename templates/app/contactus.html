@@ -1,0 +1,27 @@
+
+<ion-view view-title="Contact Page">
+    <ion-content>
+        <p style="margin-top: 20px;color: #d66767;margin-left: 15px;">You can Directly call us on our Number. <br>
+            Mobile No : 7014347505 or 8860498653.<br>
+        </p>
+        <p style="margin-left:15px">You can also Send Your Query Through this form :</p>
+        
+        <div class="list">
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Enter Name</span>
+            <input type="text" placeholder="Enter Name" ng-model="queryData.name">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Enter mobile Number</span>
+            <input type="text" placeholder="Enter mobile Number" ng-model="queryData.mobile">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Enter Your Message</span>
+            <textarea rows="3" placeholder="Enter Your Message" ng-model="queryData.message"></textarea>
+          </label>
+            <button class="button button-full button-positive" ng-click="sendContactsData()">
+                Send 
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

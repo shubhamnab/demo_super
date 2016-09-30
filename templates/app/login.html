@@ -1,0 +1,43 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Login</h1>
+    <div class="buttons">
+      <a class="button ion-close-round" href="#/app/home" ng-click='closeLogin()'>
+      </a>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form novalidate name='userLogin'>
+
+      <p class="text-danger" ng-class='loginForm.error'> {{loginForm.errorMsg}} </p>
+
+        <label class="item item-input" ng-class="{'has-error': userLogin.email.$dirty && userLogin.email.$error, 'has-success':userLogin.email.$valid}">
+          <span class="input-label">Email</span>
+          <input type="email" name='email' ng-model="loginData.email" required='required'>
+        </label>
+        <label class="item item-input" ng-class="{'has-error': userLogin.password.$dirty && userLogin.password.$error, 'has-success':userLogin.password.$valid}">
+          <span class="input-label">Password</span>
+          <input type="password" name='password'  ng-model="loginData.password" required='required'>
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit" ng-click='doLogin(loginData)'>Log in</button>
+        </label>
+    </form>
+<!-- 
+    <button class=" button button-block button-positive" onclick='fblogin()'>
+      <i style='font-size:30px; margin-right:10px;' class="ion-social-facebook"></i>
+      <span style='margin-left:20x; vertical-align:inherit;'>Login with Facebook</span> 
+    </button>
+    <button class=" button button-block button-assertive" id='googleSigninBtn' >
+      <i style='font-size:25px; margin-right:10px;' class="ion-social-googleplus"></i>
+      <span style='margin-left:20x; vertical-align:inherit;'>Login with Google</span>
+    </button> -->
+    <!-- HTML for render Google Sign-In button -->
+<!-- <div id="gSignIn"></div>
+HTML for displaying user details
+<div class="userContent"></div> -->
+    
+      <p> Not a Registered User , <a href="#/app/signup" ng-click="closeLogin()">Sign Up </a> Here</p>
+      
+  </ion-content>
+</ion-modal-view>

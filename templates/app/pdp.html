@@ -1,0 +1,128 @@
+<ion-view view-title="Playlists" ng-controller="pdpController as vm">
+    <ion-content style='background:#efefef;'>
+    <div class="loader" id="loader1" style="display:none"></div>
+        <div class="pdp-card">
+            <div class="pdp-item">
+                <img ng-src="{{item.img}}" alt="" class="full-image">
+                <p class='pdp-item-name'> {{item.name}} </p>
+                <div class='row'>
+                    <div class="pdp-item-discount">20%</div>
+                    <div class="pdp-item-price">
+                        Rs. {{item.price | currency: ''}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pdp-card">
+            <div class="row">
+                <div class="col col-100">
+                    <div class="pdp-item-option">
+                        <h3>Item Description</h3>
+                        <p class='pdp-item-desc'>Here is a color palette based on the material design base colors. Each of these colors is defined with a base color class and an optional lighten or darken class</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pdp-card">
+            <div class="row">
+                <div class="col col-50">
+                    <div class="pdp-item-option">
+                        <h3>Total Stones</h3>
+                        <p class='pdp-item-desc'>4</p>
+                    </div>
+                </div>
+                <div class="col col-50">
+                    <div class="pdp-item-option">
+                        <h3>Plating</h3>
+                        <p class='pdp-item-desc'>Gold</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pdp-card">
+            <div class="row">
+                <div class="col col-100">
+                    <div class="pdp-item-option">
+                        <h3>Select Quantity</h3>
+                        <p>minimum 12 pcs</p>
+                        <select name="" id="">
+                            <option value="">12</option>
+                            <option value="">24</option>
+                            <option value="">36</option>
+                            <option value="">48</option>
+                            <option value="">60</option></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pdp-card">
+            <div class="row">
+                <div class="col col-100">
+                    <div class="pdp-item-option">
+                        <h3>Select Size</h3>
+                        <select name="" id="">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pdp-card" style='padding:5px;'>
+            <div >
+                <div class="pdp-buy-option">
+                    <button class="button button-positive ">Add to Cart</button>
+                    <button class="button button-assertive ">Buy Now</button>       
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+<ion-view>
+    <ion-content class="header-background">
+        <!--<ion-header-bar align-title="center">
+            <button class="button button-clear button-icon icon " ng-click="closeModal()"></button>
+        </ion-header-bar>-->
+
+        <form>
+            <div class="product-header" style="background:url({{pdpProduct.imgLg}}) no-repeat; background-size: cover;">
+                <h2 class="product-name">{{pdpProduct.name}}</h2>
+                <div class="product-price">₹{{pdpProduct.price}}</div>
+                <!--<div class="product-like">
+                    <button class="button button-clear button-icon" ng-click="goBack()" ><i class="ion-chevron-left"></i></button>
+                </div>-->
+            </div>
+            <div class="product-body">
+                <div class="product-info">
+                    NICE PRODUCT AND ETC ETC...... .
+                </div>
+                <div class="like row">
+                        <div class="product-info">
+                    Enter Quantity
+                </div>
+                        <i class="ion-ios-plus-outline" style="font-size:22px;margin-left:30px" data-ng-click="changeQuantity(pdpProduct,'inc')"></i>
+                        <i data-ng-if="selectedProducts[pdpProduct.id]" style="font-size:22px;margin-left:10px">{{selectedProducts[pdpProduct.id].qty}}</i>
+                        <i data-ng-if="!selectedProducts[pdpProduct.id]" style="font-size:22px;margin-left:10px">0</i>
+                        <i class="ion-ios-minus-outline" style="font-size:22px;margin-left:10px" data-ng-click="changeQuantity(pdpProduct,'dec')"></i>
+                    </div>
+                <!-- <div class="product-quantity">
+                    <label class="item item-input">
+                        <input type="text" placeholder="Enter Quantity Here...">
+                    </label>
+                </div>
+                <div class="add-to-cart">
+                    <button class="button button-block button-balanced" ng-click="doOrder()">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="add-to-favorites">
+                    <button class="button button-block button-dark">
+                        Add to Favorites
+                    </button>
+                </div> -->
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

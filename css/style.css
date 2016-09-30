@@ -1,0 +1,140 @@
+/* Empty. Add your own CSS if you like */
+.thank-you{
+
+}
+.thank-you-heading{
+  text-align: center;
+  font-weight: 500;
+  display: block;
+  color: #FF5722;
+  font-size: 40px;
+  margin-top: 20px;
+}
+.thank-you-img{
+  background-image: url(../img/order.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  margin: 0px auto;
+  display: block;
+  height: 125px;
+  text-align: center;
+}
+.thank-you-text{
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: 500;
+}
+.continue-shopping{
+  color: #d25a34;
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 0 20px;
+  text-align: center;
+}
+.continue-shopping::before{
+  content: url(../img/continue-shopping.png);
+  vertical-align: -webkit-baseline-middle;
+  margin-right: 10px;
+}
+.fixed-outside{
+  position: absolute;
+  bottom: 0;
+  color:white;
+  width: 100%;
+  height:  120px;
+  text-align:center;
+}
+
+.sdHeaderSMALL_16 {
+    background: #58c1ea none repeat scroll 0 0;
+    border-radius: 10px;
+    color: #fff;
+    height: 17px;
+    padding: 2px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: -3px;
+    width: 17px;
+}
+
+.bar .buttons span {
+
+    }
+a.item.item-thumbnail-left.item-text-wrap.activated {
+    background-color: white !important;
+}
+.mrp {
+    margin-right: 10% !important;
+    text-decoration: line-through;
+}
+.prices{
+    color: #86d44d;
+    display: inline-flex;
+    position: absolute;
+    bottom: 10px;
+}
+.emptyCart p {
+    margin-top: 30px;
+    color: red;
+    margin-bottom: 20px;
+}
+.font22{
+    font-size: 25px;
+    color:#7787A2;
+}
+.enterDetailsHeading {
+    font-size: 14px;
+    margin: 15px;
+    text-align: center;
+    color: #25BFC1;
+}
+.mandatory:after { content:" *"; color: red}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid #3498db;
+  width: 40px;
+  height: 40px;
+  margin-left: 40%;
+  margin-top: 50%;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#loader3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    z-index: 10;
+    filter: alpha(opacity=80);
+}
+.has-error{
+    border-bottom: 2px solid red;
+}
+.has-success{
+    border-bottom: 2px solid green;
+}
+.text-danger{
+    color: red;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}

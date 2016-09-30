@@ -1,0 +1,56 @@
+[{
+    "id": "c1",
+	"img": "img/categories/icon1.png",
+    "name": "Cooking Essential",
+    "lastText": "Aata,Dal,Rice,Besan etc"
+  }, {
+    "id": "c2",
+	"img": "img/categories/icon2.png",
+    "name": "BreakFast items",
+    "lastText": "maggie,khakra ,backery etc"
+  }, {
+    "id": "c3",
+	"img": "img/categories/icon3.png",
+    "name": "ColdDrinks & Bevrages",
+    "lastText": "Coffee,Tea , colddrinks"
+  }, {
+    "id": "c4",
+	"img": "img/categories/icon4.png",
+    "name": "Cooking Oils & Masale",
+    "lastText": "Oil,Mirchi,haldi,Jeera etc"
+  }, {
+    "id": "c5",
+	"img": "img/categories/icon5.png",
+    "name": "Household needs",
+    "lastText": "Soap,detegents,cleaner etc"
+  },
+{
+    "id": "c6",
+	"img": "img/categories/icon6.png",
+    "name": "Body & face Care",
+    "lastText": "FashWash,Shaving Cream , Deo ect"
+  },
+{
+    "id": "c7",
+	"img": "img/categories/icon7.png",
+    "name": "Dry Fruits & choclates",
+    "lastText": "Kaju,Badam,Toffee etc"
+  },
+{
+    "id": "c8",
+	"img": "img/categories/icon8.jpg",
+    "name": "Patanjali Products",
+    "lastText": "patanjali Products"
+  },
+{
+    "id": "c9",
+	"img": "img/categories/icon9.png",
+    "name": "Baby care",
+    "lastText": "Baby Food & care products"
+  },
+{
+    "id": "c10",
+	"img": "img/categories/icon10.png",
+    "name": "Plastic Items",
+    "lastText": "jaadu , Bottle etc"
+  }]

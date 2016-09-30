@@ -1,0 +1,52 @@
+<ion-modal-view style="top:45px">
+  <ion-header-bar>
+    <h1 class="title">SignUp</h1>
+    <div class="buttons">
+      <a class="button ion-close-round" href="#/app/home" ng-click='closeModal(2)'>
+      </a>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form novalidate name='userSignup'>
+        <p class="text-danger" ng-class='signupForm.error' style='margin-left:10px;'> {{signupForm.errorMsg}} </p>
+        <label for="name" class='item item-input'  >
+          <span class="input-label">* Name</span>
+          <input type="text" name='name' id='name' ng-model='userData.name' required='required'>
+        </label>
+        
+        <label for="email" class='item item-input' >
+          <span class="input-label">* Email </span>
+          <input type="email" name='email' ng-model='userData.email' required='required'>
+        </label>
+        <label for="phone" class='item item-input' >
+          <span class="input-label">* Phone </span>
+          <input type="number" name='phone' ng-model='userData.phone' required='required'>
+        </label>
+        <label for="addr" class='item item-input' >
+          <span class="input-label">* Address </span>
+          <input type="text" name='addr' ng-model='userData.addr' required='required'>
+        </label>
+        <label for="pass" class='item item-input' >
+          <span class="input-label">* Password </span> 
+          <input 
+            type="password" 
+            name='pass' 
+            ng-model='userData.pass' 
+            required='required'
+            placeholder="greater then 7 char">
+        </label>
+        <label for="repass" class='item item-input' >
+          <span class="input-label">* Confirm Password </span>
+          <input 
+          type="password" 
+          name='repass' 
+          ng-model='userData.repass' 
+          required='required'
+          placeholder="greater then 7 char">
+        </label>
+        <label class="item">
+              <button ng-click='signup(userData)' class="button button-block button-positive" type="submit">Sign up</button>
+        </label>
+    </form>
+  </ion-content>
+</ion-modal-view>

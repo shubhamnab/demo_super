@@ -1,0 +1,39 @@
+
+
+<ion-view view-title="Contact Details" style="margin-top:3px">
+    <ion-content>
+        <div class="loader" id="loader3" style="display:none">
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <div class="clearfix"></div>
+       <h5 class="enterDetailsHeading">Please Enter Your Details</h5>
+            <form name="userForm">
+  <div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label mandatory">Name</span>
+    <input type="text" placeholder="Enter Name ..." novalidate name="userName" maxlength="30" required ng-model="details.name">
+    </label>
+      
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Email</span>
+    <input type="text" placeholder="Enter Your Email .." name="userEmail" ng-model="details.email">
+  </label>
+    
+    <label class="item item-input item-stacked-label">
+    <span class="input-label mandatory">Mobile No.</span>
+    <input type="tel" placeholder="Enter Phone Number" novalidate maxlength="10" name="userPhone" required ng-model="details.phoneNumber">
+     </label>
+    
+      <label class="item item-input item-stacked-label">
+        <span class="input-label mandatory">Address</span>
+          <textarea placeholder="Enter Address.." novalidate name="userAddress" required ng-model="details.address"></textarea>
+  </label>
+</div>
+        <p style="font-size: 74%;text-align: center;">All * Fields are Mendatory </p>
+        <p ng-if="error" style="color:red;text-align:center">{{error}}</p>
+        <button class="button button-block button-balanced" data-ng-click="submitOrder()">
+                SUBMIT ORDER
+            </button>
+</form>
+    </ion-content>
+</ion-view>

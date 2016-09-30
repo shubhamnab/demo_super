@@ -1,0 +1,13 @@
+<ion-view view-title="Sub category" style="margin-top:3px">
+    <ion-content>
+        <div class="loader" id="loader" style="display:block"></div>
+<div class="list">
+    <a class="item item-avatar" ng-repeat="subCategory in subCategories" ng-if="subCategory != null" href="#/app/plp/{{subCategory.subCatId}}">
+      <img ng-src="img/subCatgory/scIcons/{{catID}}/{{subCategory.scImage}}">
+      <h2>{{subCategory.subCatName}}</h2>
+      <p ng-if="subCategory.text1">{{subCategory.text1}}</p>
+        <span class="badge badge-assertive" style="top: 27px;"><span class="ion-arrow-right-c"></span></span>
+    </a>
+</div>
+        </ion-content>
+</ion-view>

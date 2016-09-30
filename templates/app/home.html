@@ -1,0 +1,16 @@
+<ion-view view-title="RIDDHI SUPER MARKET" style="margin-top:3px">
+    <ion-content>
+        <ul class="cate-lv1" style="padding-bottom: 45px;">
+            <li>
+            <a class="item-background cate-lv1-item" ng-repeat="category in categories" href="#/app/subcat/{{category.id}}"
+            style="background: url({{category.img}}) no-repeat; background-size: cover;width:49%;float:left">
+                <div class="item-wrapper">
+                    <h2>{{category.name}}</h2>
+                    <p>{{category.lastText}}</p>
+                </div>
+            </a>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>
+
